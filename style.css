@@ -1,0 +1,1061 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+    backdrop-filter: blur(20px);
+    transition: .6s ease;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 29px 14px 29px;
+}
+header.sticky{
+    background: rgba(255, 255, 255, 0.1);
+    padding:12 31px;
+}
+.logo{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #040335;
+}
+.nav-list a{
+    margin-left: 5px;
+    padding: 0 5px 6px 5px;
+    color: #040335;
+}
+.nav-list a:hover{
+    border-bottom: 2px solid #040335;
+}
+.nav-list .active-nav{
+    border-bottom: 2px solid #040335;
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header .hamburger{
+    display: none;
+    cursor: pointer;
+    padding: 0px;
+}
+header .hamburger .line{
+    width: 26px;
+    height: 2px;
+    background: #040335;
+    margin: 7px 0;
+}
+.nav-right .user{
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    margin-left: 10px;
+}
+.user:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.user img{
+    width: 100%;
+    border-radius: 50%;
+}
+.user-dropdown{
+    position: absolute;
+    width: 250px;
+    right: 0;
+    opacity: 1;
+    border-radius: 20px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+}
+.user-dropdown.userinfo{
+    display: block;
+}
+.user-top{
+    padding: 30px;
+    background: #040335;
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.user-top h2{
+    left: 40%;
+    top: 49%;
+    padding: 0px 20px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: #bd93f9;
+    font-size: 3em !important;
+    font-weight: 500;
+    color: #fff;
+    position: absolute;
+}
+.user-down{
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    backdrop-filter: blur (120em) !important;
+    background: #fff;
+    width: 100%;
+    padding: 40px 0 20px 0;
+    text-align: center;
+}
+.user-down h3{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #111827;
+}
+.user-down a{
+    font-size: .66rem;
+    margin: 0;
+}
+.user-down .user-social-links i{
+    margin-top: 4%;
+    color: #050436;
+    font-size: 1rem;
+    padding: 3px;
+    margin-right: 4px;
+    border-radius: 8px;
+}
+.user-social-links i:hover{
+    background: #050436;
+    color: #fff;
+}
+.user-down .user-links, .user-links div{
+    text-align: start;
+    padding-left: 20px;
+}
+.user-links h4{
+    color: #111827;
+}
+.user-links div{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.user-links a{
+    padding-top: 8px;
+    font-size: 1em;
+    color: #4e4e4e;
+}
+.user-links a:hover{
+    padding-left: 5px;
+    transition: .5s;
+}
+
+
+main{
+    margin-top: 69px;
+}
+main .meun{
+    margin-left: 5px;
+    width: 17vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-right: 1px solid #556274;
+    height: 88vh;
+}
+.meun .meun-head{
+    text-align: center;
+}
+main .meun .links{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    /* background: #040335;
+    margin-top: 2px; */
+}
+.links a{
+    padding-left: 10px;
+    font-size: 1.1rem;
+    color: #4e4e4e;
+}
+.links a:hover{
+    padding-left: 20px;
+    transition: .5s;
+}
+.content{
+    width: 80vw;
+    margin-left: 18vw;
+    padding-top: 3px;
+}
+.content h2{
+    color: #01011f;
+}
+.home{
+    background:linear-gradient(rgba(0,0,0,0.1),#270447d8), url(img/home-bg.jpg) ;
+    background-size: cover;
+    background-position: center;
+    height: 87vh;
+    width: 80vw;  
+    text-align: center;
+    padding: 18% 0;
+}
+.home h1, .exhibitions-page h1, .visit-page h1, .subscribe h3, .map-box h2, .tour h2{
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-family: garamond ;
+    color: #fff !important;
+}
+.home a{
+    border:  1px solid #556274;
+    padding: 10px ;
+    border-radius: 3px;
+    color: #fff;
+}
+/* .home a:hover{
+    
+    transition: 1s;
+} */
+.gallery-highlights{
+    margin-top: 10px;
+}
+.highlights{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.single-high{
+    width: 19vw;
+    background: #fff; 
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    cursor: pointer;
+}
+.single-high:hover img{
+    transform: scale(0.95);
+    transform-origin: 50% 50%;
+}
+.single-high img{
+    width: 100%;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.single-high div{
+    padding: 5px 7px;
+}
+.single-high a{
+    font-size: .8rem;
+    text-decoration: underline;
+}
+.single-high a:hover{
+    padding-left: 10px;
+    transition: .3s;
+}
+
+.sponsor{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    /* margin-right: 10px; */
+}
+.sponsor .sponsor-right, .sponsor .sponsor-left{
+    display: flex !important;
+    justify-content: space-between;
+    flex-basis: 48.5%;
+    align-items: center;
+}
+.sponsor-img{
+    width: 90px;
+    cursor: pointer;
+}
+.sponsor-img img{
+    width: 100%;
+}
+.learn{
+    display: flex;
+    justify-content: center;
+}
+.learn-more{
+    border-radius: 9px;
+    border: 1px solid #556274;
+    padding: 10px 170px;
+    cursor: pointer;
+    transition: 1s;
+}
+.learn-more a{
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+    color: #01011f;
+    font-size: 1.5rem;
+    background: transparent;
+    transition: 1s;
+}
+.learn-more:hover{
+    background: #01011f;
+    color: #fff;
+}
+.learn-more:hover a{
+    color: #fff;
+}
+
+.footer{
+    bottom: 0;
+}
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 20px;
+}
+.footer-flex h3{
+    font-size: 1.15rem;
+    padding-bottom: 3px;
+}
+.footer-flex a{
+    padding: 3px 0;
+    color: #5a5a5a;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.footer-flex a:hover, .foot-left a:hover{
+    text-decoration: underline;
+    color: #2b2b2b;
+}
+.footer-flex div{
+    display: flex;
+    flex-direction: column;
+}
+.footer-flex .footer-social div{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.footer-social div a{
+    font-size: 1.3rem;
+    color: #050436;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #c4c4c4;
+    text-align: center;
+    transition: .3s;
+}
+.footer-social div a:hover{
+    background: #050436;
+    color: #fff;
+}
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 40px 20px;
+    align-items: center;
+}
+.foot-left a{
+    font-size: .89rem;
+    color: #5a5a5a;
+    font-weight: 600;
+    padding-right: 10px;
+}
+.foot-left a span{
+    font-size: 1rem;
+}
+.foot-right p{
+    color: #111827;
+    font-weight: 600;
+}
+.foot-right p i{
+    color: red;
+}
+
+/* ARTISTS PAGE STYLING*/
+
+.artists-page{
+    background: url(img/art-bg.jpg);
+    width: 82vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: fixed;
+    overflow-x: auto;
+}
+.artists{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.search-art{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.search-art .input{
+    border: 1.5px solid #050436;
+    border-radius: 10px;
+    padding: 5px 15px;
+    align-items: center;
+}
+.search-art input{
+    background: transparent;
+    width: 360px;
+    outline: 0;
+    border: 0;
+}
+.list-head{
+    display: flex;
+    justify-content: center;
+}
+.list-head h2{
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+}
+.alha{
+    padding: 10px 0 0 30px;
+    border-bottom: 1px solid #270447d8; 
+    margin-bottom: 15px;
+    color: #040335;
+}
+.single-art{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    width: 19vw;
+}
+.single-art h3{
+    font-size: 1rem;
+}
+.single-art .art-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+.art-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.single-art:hover .art-img img{
+    transform: scale(1.05);
+}
+.art-info p{
+    font-size: .9rem;
+    padding: 0;
+}
+.art-info h3{
+    padding: 0 !important;
+}
+
+/* EXHIBITONS PAGE STYLING*/
+
+.exhibitions-page{
+    background:linear-gradient(rgba(0,0,0,0.1),#270447d8), url(img/event.jpg);
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.exhibitions{
+    padding-bottom: 40px;
+}
+.exhibitions-page h1{
+    padding: 8% 0;
+    text-align: center;
+}
+.exhibitions h2{
+    color: #040335;
+    font-size: 1.3rem; 
+    padding: 6px 0 10px 0;
+}
+.exhibitions-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,  minmax(300px, 1fr));
+    gap: 25px;
+    margin: 0 auto;
+}
+.exhibitions-list .single-exhibitions{
+    position: relative;
+    max-width: 100%;
+    height: 360px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.single-exhibitions img{
+    width: 100%;
+    transform: scale(1.05);
+    transition: .7s;
+}
+.single-exhibitions:hover img{
+    transform: scale(1);
+}
+.exhibitions-list .single-exhibitions .overlay{
+    transition: 1s ease;
+}
+.exhibitions-list .single-exhibitions:hover .overlay{
+    z-index: 777;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.single-exhibitions .info{
+    z-index: 777;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    color: #fff;
+    opacity: 0;
+    transition: .5s ease;
+    transform: translateY(20px);
+}
+.exhibitions-list .single-exhibitions:hover .info{
+    transform: translateY(0);
+    opacity: 1 ;
+}
+.info p{
+    font-size: .6rem;
+}
+.info h3{
+    font-size: .99rem;
+}
+.exhibitions-list .single-exhibitions .info span{
+    font-size: 1.2em;
+}
+.single-exhibitions img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exhibitions-model{
+    z-index: 9999999;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.exhibitions-model.activemodel{
+    visibility: visible;
+    opacity: 1;
+}
+.exhibitions-model-body{
+    position: relative;
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(-50px);
+    transition: .5s ease;
+}
+.exhibitions-model.active .exhibitions-model-body{
+    transform: translateY(0);
+}
+.exhibitions-close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: .5s;
+}
+.exhibitions-close-btn:hover{
+    font-size: 1.6rem;
+}
+.exhibitions-model-body h3{
+    font-size: 1.5em;
+    color: #fff;
+}
+.exhibitions-model-body img{
+    width: 70%;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+.exhibitions-model-body p{
+    color: #fff;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+/* VISIT PAGE STYLING */
+
+.visit-page{
+    background:linear-gradient(rgba(0,0,0,0.1),#270447d8), url(img/visit.jpeg);
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.visit-page h1{
+    padding: 8% 0;
+    text-align: center;
+}
+.visit{
+    margin-top: 20px;
+    width: 100%;
+}
+.visit .tour-vid{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+}
+.tour-vid video{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* .map-box {
+    width: 100vw;
+}  */
+#map {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#map iframe{
+    width: 90%;
+    height: 50vh;
+}
+
+.subscribe{
+    margin: 20px 0 40px 0;
+}
+.subscribe h3, .map-box h2, .tour h2{
+    padding: 10px 0;
+    text-align: center;
+    color: #040335 !important;
+    font-size: 1.78rem;
+}
+.subscribe-div{
+    margin: 0 18vw;
+    display: flex;
+    background: transparent;
+    padding: 14px 25px;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.subscribe-div input{
+    outline: 0;
+    width: 27vw;
+    border: 0;
+    font-size: 1rem;
+}
+.subscribe-div a{
+    padding: 10px 22px;
+    color: #fff;
+    background: #040335;
+    border-radius: 6px;
+    border: 1px solid #040335;
+    transition: .5s;
+}
+.subscribe-div a:hover{
+    color: #040335;
+    background: #fff;
+}
+
+
+@media only screen and (max-width: 1150px){
+    .home{
+        height: 87vh;
+        width: 100vw;  
+        padding: 18% 0;
+    }
+    main .content{
+        width: 100vw;
+    }
+    .exhibitions-page{
+        width: 100vw;
+        height: 20vh !important;
+    }
+    .exhibitions{
+        margin: 0 10px;
+    }
+    .meun{
+        width: 26vw !important;
+        height: 90vh;
+        position: absolute;
+        left: 0;
+        margin-left: -500px !important;
+        z-index: 999;
+    }
+    main .content {
+        width: 100vw;
+        margin: 0;
+        padding: 0 !important;
+    }
+    .content .about, .gallery-highlights, .partners, .footer {
+        padding: 10px;
+    }
+    .single-high{
+        width: 28vw;
+        background: #fff; 
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 10px 0;
+        cursor: pointer;
+    }
+    .sponsor .sponsor-right, .sponsor .sponsor-left{
+        display: flex !important;
+        justify-content: space-between;
+        flex-basis: 49%;
+        align-items: center;
+    }
+}
+
+
+@media only screen and (max-width: 750px){
+    .exhibitions-page{
+        width: 100vw;
+        height: 20vh !important;
+    }
+    main .content{
+        width: 100vw;
+    }
+    header{
+        padding: 15px 18px 19px 18px;
+    }
+    .home h1, .exhibitions-page h1, .visit-page h1{
+        font-size: 2.9rem;
+        margin-bottom: 10px;
+    }
+    .logo{
+        font-size: 1.4rem;
+    }
+    header .nav-list a{
+        margin-left: 3px;
+        padding: 0 5px 6px 5px;
+        font-size: .7999rem;
+    }
+    .home{
+        height: 87vh;
+        width: 98.2vw;  
+        padding: 22% 0;
+    }
+    .exhibitions-list {
+        gap: 15px;
+    }
+    .exhibitions-page{
+        width: 100vw;
+        height: 20vh !important;
+    }
+    .exhibitions-page h1{
+        padding: 13% 0;
+    }
+    .exhibitions{
+        margin: 0 10px;
+    }
+    .exhibitions h2{
+        font-size: 1.1rem;
+    }
+    .learn-more{
+        padding: 4px 85px;
+    }
+    .single-high div p{
+        font-size: .89rem;
+    }
+    .sponsor .sponsor-right, .sponsor .sponsor-left{
+        display: flex !important;
+        justify-content: space-between !important;
+        flex-basis: 100%;
+        align-items: center;
+    }
+    .footer .footer-social div{
+        display: flex;
+        flex-direction: column !important;
+        gap: 10px;
+    }
+    .tour-vid{
+        padding: 0 10px !important;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .exhibitions-page, .visit-page{
+        width: 100vw;
+        height: 20vh !important;
+    }
+    main .content{
+        width: 100vw;
+    }
+    main{
+        margin-top: 59px;
+    }
+    .home{
+        height: 87vh;
+        width: 100vw;  
+        padding: 50% 0;
+    }
+    main{
+        width: 100vw;
+    }
+    .home h1, .exhibitions-page h1, .visit-page h1, .subscribe h3, .map-box h2, .tour h2{
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+    header .hamburger{
+        display: block;
+    }
+    header .nav-list{
+        height: 0;
+        top: 57px;
+        position: absolute;
+        visibility: hidden;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto 0 auto;
+        background: #fff;
+        color: #fff;
+        align-items: center;
+        transition: .5s;
+        padding: 0 30vw;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .nav-list a{
+        margin: 4px 0;
+        transition: -.5s;
+        opacity: 0;
+        padding: 10px 20px !important;
+        border: 0 !important;
+    }
+    .nav-list .active-nav {
+        background: #01011f;
+        margin-top: 20px;
+        color: #fff;
+        border-radius: 35px;
+    }
+    .nav-list a:hover{
+        background: #01011f;
+        color: #fff;
+        border-radius: 35px;
+    }
+    .nav-list.active{
+        visibility: visible;
+        height: 55vh;
+    }
+    .nav-list.active a{
+        opacity: 1;
+    }
+    .logo{
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #040335;
+    }
+    .single-high{
+        width: 45vw;
+        background: #fff; 
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 10px 0;
+        cursor: pointer;
+    }
+    .sponsor-img{
+        width: 75px;
+        cursor: pointer;
+    }
+    .footer-flex {
+        margin: 10px 5px 10px 5px;
+    }
+    .footer-flex h3{
+        font-size: .799rem;
+        padding-bottom: 3px;
+    }
+    .footer-flex a{
+        font-size: .799rem;
+    }
+    .footer-social div a{
+        font-size: 1.1rem;
+        width: 31px;
+        height: 31px;
+    }
+    .footer-bottom {
+        padding: 0 7px 40px 7px;
+    }
+    .footer-bottom a{
+        font-size: .599rem;
+        padding-right: 5px;
+    }
+    .footer-bottom a span{
+        font-size: .7999rem;
+    }
+    .footer-bottom p{
+        font-size: .6999rem;
+        align-items: end;
+    }
+    .footer-bottom p span{
+        display: none;
+    }
+
+    
+
+    .artists{
+        padding: 0 20px;
+    }
+    .search-art{
+        margin-top: 40px;
+    }
+    .search-art input{
+        width: 310px;
+    }
+    .list-head h2{
+        font-size: 1.5rem;
+        padding-top: 10px;
+    }
+    .alha{
+        padding: 5px 0 0 20px;
+        color: #040335;
+    }
+    .single-art{
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+    .single-art .art-img{
+        width: 40px;
+        height: 40px;
+    }
+    .art-info p{
+        font-size: .7999rem;
+    }
+    .art-info h3{
+        font-size: 1rem;
+    }
+    .learn-more{
+        padding: 4px 60px;
+    }
+    .learn-more a{
+        font-size: 1.2rem;
+    }
+    .exhibitions h2{
+        font-size: .899rem;
+    }    
+    .exhibitions-page h1{
+        padding: 15% 0;
+    }
+    .subscribe{
+        margin: 10px 0 20px 0;
+    }
+    .subscribe h3, .map-box h2, .tour h2{
+        font-size: 1.28rem;
+    }
+    .subscribe-div{
+        margin: 0 7vw;
+        padding: 11px 20px;
+    }
+    .subscribe-div input{
+        width: 100%;
+    }
+    .subscribe-div a{
+        padding: 7px 15px;
+        margin-left: 10px;
+    }
+}
+@media only screen and (max-width: 440px){
+    .artists{
+        padding: 0 5px;
+    }
+    .search-art input{
+        width: 170px;
+    }
+    .alha{
+        padding: 5px 0 0 10px;
+        color: #040335;
+    }
+    .single-art{
+        display: block;
+        justify-content: center !important;
+        align-items: center;
+    }
+    .artists{
+        padding: 0 15px;
+    }
+    .single-art .art-img{
+        width: 37px;
+        height: 37px;
+    }
+    .art-info p{
+        font-size: .6999rem;
+    }
+    .art-info h3{
+        font-size: .8999rem;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    main{
+        width: 100vw;
+    }
+    .home h1, .exhibitions-page h1, .visit-page h1{
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .subscribe h3, .map-box h2, .tour h2{
+        font-size: 1.5rem;
+    }
+    .exhibitions-page h1{
+        padding: 15% 0;
+    }
+    .subscribe-div{
+        margin: 0 3vw;
+        padding: 11px 5px;
+    }
+    .subscribe-div input{
+        width: 100%;
+    }
+    .subscribe-div a{
+        font-size: .6999rem;
+        padding: 7px 15px;
+        margin-left: 10px;
+    }
+    .footer-social{
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

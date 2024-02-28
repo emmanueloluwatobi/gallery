@@ -436,8 +436,8 @@ main .meun .links{
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    width: 19vw;
+    cursor: pointer;    
+    min-width: 230px;
 }
 .single-art h3{
     font-size: 1rem;
@@ -779,6 +779,26 @@ main .meun .links{
     .exhibitions h2{
         font-size: 1.1rem;
     }
+    .single-art{
+        gap: 5px;
+        margin-bottom: 15px;
+        min-width: 200px;
+    }
+    .art-img{
+        width: 38px !important;
+        height: 38px !important ;
+    }
+    .art-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    .single-art h3 {
+        font-size: .799rem;
+    }
+    .single-art p{
+        font-size: .8rem;
+    }
     .learn-more{
         padding: 4px 85px;
     }
@@ -943,16 +963,17 @@ main .meun .links{
     .single-art{
         gap: 5px;
         margin-bottom: 15px;
+        min-width: 190px;
     }
     .single-art .art-img{
         width: 40px;
         height: 40px;
     }
     .art-info p{
-        font-size: .7999rem;
+        font-size: .6999rem;
     }
     .art-info h3{
-        font-size: 1rem;
+        font-size: .799rem;
     }
     .learn-more{
         padding: 4px 60px;
@@ -996,22 +1017,23 @@ main .meun .links{
         color: #040335;
     }
     .single-art{
-        display: block;
-        justify-content: center !important;
-        align-items: center;
+        min-width: 150px;
     }
     .artists{
         padding: 0 15px;
+    }
+    .single-art .art-img{
+        display: none ;
     }
     .single-art .art-img{
         width: 37px;
         height: 37px;
     }
     .art-info p{
-        font-size: .6999rem;
+        font-size: .7rem;
     }
     .art-info h3{
-        font-size: .8999rem;
+        font-size: .8rem;
     }
 }
 
@@ -1044,8 +1066,28 @@ main .meun .links{
     .footer-social{
         display: none !important;
     }
-}
 
+    .art-info p{
+        font-size: .5rem;
+    }
+    .art-info h3{
+        font-size: .6rem;
+    }
+    .single-art{
+        min-width: 120px;
+    }
+}
+@media only screen and (max-width: 310px){
+    .art-info p{
+        font-size: .5rem;
+    }
+    .art-info h3{
+        font-size: .55rem;
+    }
+    .single-art{
+        min-width: 100px;
+    }
+}
 
 
 

@@ -109,6 +109,7 @@ main .meun .links{
     padding: 18% 0;
     justify-content: center;
     flex-direction: column;
+    display: flex;
 }
 .home h1, .exhibitions-page h1, .visit-page h1, .subscribe h3, .map-box h2, .tour h2{
     font-size: 3.5rem;

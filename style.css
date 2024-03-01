@@ -114,7 +114,7 @@ main .meun .links{
 .home h1, .exhibitions-page h1, .visit-page h1, .subscribe h3, .map-box h2, .tour h2{
     font-size: 3.5rem;
     margin-bottom: 10px;
-    font-family: garamond;
+    font-family: 'EB Garamond';
     color: #fff !important;
 }
 .home a{
@@ -375,12 +375,16 @@ main .meun .links{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+
 }
 .exhibitions{
     padding-bottom: 40px;
 }
 .exhibitions-page h1{
-    padding: 8% 0;
     text-align: center;
 }
 .exhibitions h2{
@@ -517,9 +521,12 @@ main .meun .links{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .visit-page h1{
-    padding: 8% 0;
     text-align: center;
 }
 .visit{
@@ -641,7 +648,7 @@ main .meun .links{
 @media only screen and (max-width: 750px){
     .exhibitions-page, .visit-page{
         width: 100vw;
-        height: 20vh !important;
+        height: 35vh !important;
     }
     main .content{
         width: 100vw;
@@ -723,7 +730,7 @@ main .meun .links{
 @media only screen and (max-width: 600px){
     .exhibitions-page, .visit-page{
         width: 100vw;
-        height: 20vh !important;
+        height: 25vh !important;
     }
     main .content{
         width: 100vw;

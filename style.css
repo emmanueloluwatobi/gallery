@@ -58,106 +58,6 @@ header .hamburger .line{
     background: #040335;
     margin: 7px 0;
 }
-.nav-right .user{
-    width: 39px;
-    height: 39px;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-    margin-left: 10px;
-}
-.user:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-.user img{
-    width: 100%;
-    border-radius: 50%;
-}
-.user-dropdown{
-    position: absolute;
-    width: 250px;
-    right: 0;
-    opacity: 1;
-    border-radius: 20px !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: none;
-}
-.user-dropdown.userinfo{
-    display: block;
-}
-.user-top{
-    padding: 30px;
-    background: #040335;
-    width: 100%;
-    position: relative;
-    border-radius: 20px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.user-top h2{
-    left: 40%;
-    top: 49%;
-    padding: 0px 20px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    background: #bd93f9;
-    font-size: 3em !important;
-    font-weight: 500;
-    color: #fff;
-    position: absolute;
-}
-.user-down{
-    border-radius: 20px;
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    backdrop-filter: blur (120em) !important;
-    background: #fff;
-    width: 100%;
-    padding: 40px 0 20px 0;
-    text-align: center;
-}
-.user-down h3{
-    font-size: 1.2em;
-    font-weight: 500;
-    color: #111827;
-}
-.user-down a{
-    font-size: .66rem;
-    margin: 0;
-}
-.user-down .user-social-links i{
-    margin-top: 4%;
-    color: #050436;
-    font-size: 1rem;
-    padding: 3px;
-    margin-right: 4px;
-    border-radius: 8px;
-}
-.user-social-links i:hover{
-    background: #050436;
-    color: #fff;
-}
-.user-down .user-links, .user-links div{
-    text-align: start;
-    padding-left: 20px;
-}
-.user-links h4{
-    color: #111827;
-}
-.user-links div{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-}
-.user-links a{
-    padding-top: 8px;
-    font-size: 1em;
-    color: #4e4e4e;
-}
-.user-links a:hover{
-    padding-left: 5px;
-    transition: .5s;
-}
 
 
 main{
@@ -207,11 +107,13 @@ main .meun .links{
     width: 80vw;  
     text-align: center;
     padding: 18% 0;
+    justify-content: center;
+    flex-direction: column;
 }
 .home h1, .exhibitions-page h1, .visit-page h1, .subscribe h3, .map-box h2, .tour h2{
     font-size: 3.5rem;
     margin-bottom: 10px;
-    font-family: garamond ;
+    font-family: garamond;
     color: #fff !important;
 }
 .home a{
@@ -736,7 +638,7 @@ main .meun .links{
 
 
 @media only screen and (max-width: 750px){
-    .exhibitions-page{
+    .exhibitions-page, .visit-page{
         width: 100vw;
         height: 20vh !important;
     }
@@ -759,16 +661,12 @@ main .meun .links{
         font-size: .7999rem;
     }
     .home{
-        height: 87vh;
+        height: 77vh;
         width: 98.2vw;  
         padding: 22% 0;
     }
     .exhibitions-list {
         gap: 15px;
-    }
-    .exhibitions-page{
-        width: 100vw;
-        height: 20vh !important;
     }
     .exhibitions-page h1{
         padding: 13% 0;
@@ -833,7 +731,7 @@ main .meun .links{
         margin-top: 59px;
     }
     .home{
-        height: 87vh;
+        height: 65vh;
         width: 100vw;  
         padding: 50% 0;
     }
@@ -874,7 +772,6 @@ main .meun .links{
     }
     .nav-list .active-nav {
         background: #01011f;
-        margin-top: 20px;
         color: #fff;
         border-radius: 35px;
     }
@@ -1068,7 +965,7 @@ main .meun .links{
     }
 
     .art-info p{
-        font-size: .5rem;
+        font-size: .5xrem;
     }
     .art-info h3{
         font-size: .6rem;
